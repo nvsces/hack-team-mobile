@@ -19,18 +19,20 @@ void main() async {
     MultiBlocProvider(
       providers: [
         BlocProvider(
-          create: (context) => ProjectBloc(
-            redmineRepository: sl<RedmineRepository>(),
-          )..add(CheckAutorizationProjectEvent()),
-        ),
+            create: (context) => ProjectBloc(
+                  redmineRepository: sl<RedmineRepository>(),
+                )
+            //..add(CheckAutorizationProjectEvent()),
+            ),
         BlocProvider(create: (context) => sl<BottomNavBarBloc>()),
         BlocProvider(create: (context) => sl<NavigationPagesBloc>()),
         BlocProvider(create: (context) => sl<DialogBlocBloc>()),
         BlocProvider(create: (context) => sl<ProfileBloc>()),
         BlocProvider(create: (context) => sl<HomeBloc>()),
         BlocProvider(
-            create: (context) =>
-                sl<AuthBloc>()..add(CheckAutorizationAuthEvent())),
+          create: (context) => sl<AuthBloc>(),
+        ),
+        //..add(CheckAutorizationAuthEvent())),
       ],
       child: InitPage(),
     ),
