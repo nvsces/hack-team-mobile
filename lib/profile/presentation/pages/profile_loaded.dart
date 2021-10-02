@@ -60,11 +60,28 @@ class ProfileLoadedWidget extends StatelessWidget {
                   (i) => EventCard(miting: model.mitings[i]),
                 ),
               ),
+              SizedBox(
+                height: 50,
+              ),
               TextButton(
                 onPressed: () {
                   sl<AuthBloc>().add(LogoutAuthEvent());
                 },
-                child: Text('ds==logout'),
+                child: Padding(
+                  padding: const EdgeInsets.all(8.0),
+                  child: Row(
+                    children: [
+                      SizedBox(
+                        width: 10,
+                      ),
+                      Icon(
+                        Icons.logout,
+                        color: Colors.blue,
+                      ),
+                      Text('Выйти из аккаунта'),
+                    ],
+                  ),
+                ),
               ),
             ],
           ),

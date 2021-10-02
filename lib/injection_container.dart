@@ -3,6 +3,7 @@ import 'package:hack_team_flutter_app/auth/auth_bloc/auth_bloc.dart';
 import 'package:hack_team_flutter_app/home/bloc/home_bloc.dart';
 import 'package:hack_team_flutter_app/profile/data/profile_bloc.dart';
 import 'package:hack_team_flutter_app/redmine/data/api_redmine.dart';
+import 'package:hack_team_flutter_app/redmine/domain/bloc/project_bloc.dart';
 import 'package:hack_team_flutter_app/redmine/domain/repository/redmine_repository.dart';
 import 'package:hack_team_flutter_app/routing/bloc/bottom_nav_bar_bloc.dart';
 import 'package:hack_team_flutter_app/routing/bloc/navigation_pages_bloc.dart';
@@ -18,6 +19,8 @@ Future<void> init() async {
       await SharedPreferences.getInstance();
 
   sl.registerLazySingleton<BottomNavBarBloc>(() => BottomNavBarBloc());
+  sl.registerLazySingleton<ProjectBloc>(
+      () => ProjectBloc(redmineRepository: sl()));
   sl.registerLazySingleton<AuthBloc>(() => AuthBloc(sl()));
   sl.registerLazySingleton<HomeBloc>(() => HomeBloc(sl()));
   sl.registerLazySingleton<DialogBlocBloc>(() => DialogBlocBloc());

@@ -24,17 +24,6 @@ class ProjectListWidget extends StatelessWidget {
         ),
         backgroundColor: Colors.transparent,
         elevation: 0.0,
-        actions: [
-          IconButton(
-            onPressed: () {
-              context.read<ProjectBloc>().add(LogoutProjectEvent());
-            },
-            icon: Icon(
-              Icons.logout,
-              color: Colors.black,
-            ),
-          )
-        ],
       ),
       body: Container(
         child: ListView.builder(

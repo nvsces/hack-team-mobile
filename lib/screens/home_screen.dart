@@ -66,7 +66,7 @@ class _HomeScreenState extends State<HomeScreen> {
         },
         builder: (context, state) {
           return AnimatedSwitcher(
-            duration: Duration(milliseconds: 750),
+            duration: Duration(milliseconds: 400),
             switchInCurve: Curves.linear,
             switchOutCurve: Curves.linear,
             transitionBuilder: (Widget child, Animation<double> animation) {
@@ -96,6 +96,7 @@ class _HomeScreenState extends State<HomeScreen> {
         index: selectedItem,
         color: Colors.blue,
         backgroundColor: Colors.transparent,
+        animationDuration: Duration(milliseconds: 400),
         items: <Widget>[
           Icon(
             FeatherIcons.home,
@@ -115,16 +116,6 @@ class _HomeScreenState extends State<HomeScreen> {
         ],
         onTap: onTapNavBar,
       ),
-      // bottomNavigationBar: BottomNavigationBar(
-      //   currentIndex: selectedItem,
-      //   onTap: onTapNavBar,
-      //   items: [
-      //     BottomNavigationBarItem(icon: Icon(Icons.home), label: 'Главная'),
-      //     BottomNavigationBarItem(
-      //         icon: Icon(Icons.document_scanner), label: 'Redmine'),
-      //     BottomNavigationBarItem(icon: Icon(Icons.people), label: 'Профиль'),
-      //   ],
-      // ),
     );
   }
 }
