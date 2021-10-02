@@ -1,9 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:hack_team_flutter_app/auth/auth_bloc/auth_bloc.dart';
+import 'package:hack_team_flutter_app/injection_container.dart';
+import 'package:hack_team_flutter_app/redmine/presentation/login_redmine_page.dart';
 import 'package:hack_team_flutter_app/redmine/presentation/pages/detail_project_page.dart';
 import 'package:hack_team_flutter_app/redmine/presentation/pages/task_project_page.dart';
 import 'package:hack_team_flutter_app/routing/bloc/navigation_pages_bloc.dart';
 import 'package:hack_team_flutter_app/screens/home_screen.dart';
+import 'package:hack_team_flutter_app/screens/on_boarding_page.dart';
 
 class MainRouterDelegate extends RouterDelegate<String>
     with ChangeNotifier, PopNavigatorRouterDelegateMixin<String> {
@@ -39,12 +43,31 @@ class MainRouterDelegate extends RouterDelegate<String>
                 id: id,
               ),
             ),
+            login: () => MaterialPage(
+              key: ValueKey('login'),
+              child: LoginRedminePage(
+                isFailure: false,
+              ),
+            ),
+            onBoarding: () => MaterialPage(
+              key: ValueKey('onboarding'),
+              child: OnBoardingPage(),
+            ),
           ),
         ];
-        return Navigator(
-          key: ValueKey('key'),
-          pages: _pages,
-          onPopPage: (route, result) => route.didPop(result),
+        return BlocListener<AuthBloc, AuthState>(
+          listener: (context, state) {
+            state.when(logged: () {
+              sl<NavigationPagesBloc>().add(ToHomeNavigationPagesEvent());
+            }, nonLogged: () {
+              sl<NavigationPagesBloc>().add(ToLoginNavigationPagesEvent());
+            });
+          },
+          child: Navigator(
+            key: ValueKey('key'),
+            pages: _pages,
+            onPopPage: (route, result) => route.didPop(result),
+          ),
         );
       },
     );

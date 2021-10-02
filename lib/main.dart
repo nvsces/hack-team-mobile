@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:hack_team_flutter_app/auth/auth_bloc/auth_bloc.dart';
 import 'package:hack_team_flutter_app/home/bloc/home_bloc.dart';
 import 'package:hack_team_flutter_app/injection_container.dart';
 import 'package:hack_team_flutter_app/profile/data/profile_bloc.dart';
@@ -27,6 +28,9 @@ void main() async {
         BlocProvider(create: (context) => sl<DialogBlocBloc>()),
         BlocProvider(create: (context) => sl<ProfileBloc>()),
         BlocProvider(create: (context) => sl<HomeBloc>()),
+        BlocProvider(
+            create: (context) =>
+                sl<AuthBloc>()..add(CheckAutorizationAuthEvent())),
       ],
       child: InitPage(),
     ),
@@ -40,6 +44,7 @@ class InitPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp.router(
+      debugShowCheckedModeBanner: false,
       routerDelegate: _routerDelegate,
       routeInformationParser: _routeInformationParser,
     );

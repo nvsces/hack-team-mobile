@@ -32,6 +32,14 @@ class _$NavigationPagesEventTearOff {
       id,
     );
   }
+
+  ToOnBoardingNavigationPagesEvent toOnBoarding() {
+    return const ToOnBoardingNavigationPagesEvent();
+  }
+
+  ToLoginNavigationPagesEvent toLogin() {
+    return const ToLoginNavigationPagesEvent();
+  }
 }
 
 /// @nodoc
@@ -44,6 +52,8 @@ mixin _$NavigationPagesEvent {
     required TResult Function() toHome,
     required TResult Function(int id) toDetailProject,
     required TResult Function(int id) toTaskProject,
+    required TResult Function() toOnBoarding,
+    required TResult Function() toLogin,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -51,6 +61,8 @@ mixin _$NavigationPagesEvent {
     TResult Function()? toHome,
     TResult Function(int id)? toDetailProject,
     TResult Function(int id)? toTaskProject,
+    TResult Function()? toOnBoarding,
+    TResult Function()? toLogin,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -58,6 +70,8 @@ mixin _$NavigationPagesEvent {
     TResult Function()? toHome,
     TResult Function(int id)? toDetailProject,
     TResult Function(int id)? toTaskProject,
+    TResult Function()? toOnBoarding,
+    TResult Function()? toLogin,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -68,6 +82,9 @@ mixin _$NavigationPagesEvent {
         toDetailProject,
     required TResult Function(ToTaskProjectNavigationPagesEvent value)
         toTaskProject,
+    required TResult Function(ToOnBoardingNavigationPagesEvent value)
+        toOnBoarding,
+    required TResult Function(ToLoginNavigationPagesEvent value) toLogin,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -76,6 +93,8 @@ mixin _$NavigationPagesEvent {
     TResult Function(ToDetailProjectNavigationPagesEvent value)?
         toDetailProject,
     TResult Function(ToTaskProjectNavigationPagesEvent value)? toTaskProject,
+    TResult Function(ToOnBoardingNavigationPagesEvent value)? toOnBoarding,
+    TResult Function(ToLoginNavigationPagesEvent value)? toLogin,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -84,6 +103,8 @@ mixin _$NavigationPagesEvent {
     TResult Function(ToDetailProjectNavigationPagesEvent value)?
         toDetailProject,
     TResult Function(ToTaskProjectNavigationPagesEvent value)? toTaskProject,
+    TResult Function(ToOnBoardingNavigationPagesEvent value)? toOnBoarding,
+    TResult Function(ToLoginNavigationPagesEvent value)? toLogin,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -150,6 +171,8 @@ class _$ToHomeNavigationPagesEvent extends ToHomeNavigationPagesEvent {
     required TResult Function() toHome,
     required TResult Function(int id) toDetailProject,
     required TResult Function(int id) toTaskProject,
+    required TResult Function() toOnBoarding,
+    required TResult Function() toLogin,
   }) {
     return toHome();
   }
@@ -160,6 +183,8 @@ class _$ToHomeNavigationPagesEvent extends ToHomeNavigationPagesEvent {
     TResult Function()? toHome,
     TResult Function(int id)? toDetailProject,
     TResult Function(int id)? toTaskProject,
+    TResult Function()? toOnBoarding,
+    TResult Function()? toLogin,
   }) {
     return toHome?.call();
   }
@@ -170,6 +195,8 @@ class _$ToHomeNavigationPagesEvent extends ToHomeNavigationPagesEvent {
     TResult Function()? toHome,
     TResult Function(int id)? toDetailProject,
     TResult Function(int id)? toTaskProject,
+    TResult Function()? toOnBoarding,
+    TResult Function()? toLogin,
     required TResult orElse(),
   }) {
     if (toHome != null) {
@@ -186,6 +213,9 @@ class _$ToHomeNavigationPagesEvent extends ToHomeNavigationPagesEvent {
         toDetailProject,
     required TResult Function(ToTaskProjectNavigationPagesEvent value)
         toTaskProject,
+    required TResult Function(ToOnBoardingNavigationPagesEvent value)
+        toOnBoarding,
+    required TResult Function(ToLoginNavigationPagesEvent value) toLogin,
   }) {
     return toHome(this);
   }
@@ -197,6 +227,8 @@ class _$ToHomeNavigationPagesEvent extends ToHomeNavigationPagesEvent {
     TResult Function(ToDetailProjectNavigationPagesEvent value)?
         toDetailProject,
     TResult Function(ToTaskProjectNavigationPagesEvent value)? toTaskProject,
+    TResult Function(ToOnBoardingNavigationPagesEvent value)? toOnBoarding,
+    TResult Function(ToLoginNavigationPagesEvent value)? toLogin,
   }) {
     return toHome?.call(this);
   }
@@ -208,6 +240,8 @@ class _$ToHomeNavigationPagesEvent extends ToHomeNavigationPagesEvent {
     TResult Function(ToDetailProjectNavigationPagesEvent value)?
         toDetailProject,
     TResult Function(ToTaskProjectNavigationPagesEvent value)? toTaskProject,
+    TResult Function(ToOnBoardingNavigationPagesEvent value)? toOnBoarding,
+    TResult Function(ToLoginNavigationPagesEvent value)? toLogin,
     required TResult orElse(),
   }) {
     if (toHome != null) {
@@ -296,6 +330,8 @@ class _$ToDetailProjectNavigationPagesEvent
     required TResult Function() toHome,
     required TResult Function(int id) toDetailProject,
     required TResult Function(int id) toTaskProject,
+    required TResult Function() toOnBoarding,
+    required TResult Function() toLogin,
   }) {
     return toDetailProject(id);
   }
@@ -306,6 +342,8 @@ class _$ToDetailProjectNavigationPagesEvent
     TResult Function()? toHome,
     TResult Function(int id)? toDetailProject,
     TResult Function(int id)? toTaskProject,
+    TResult Function()? toOnBoarding,
+    TResult Function()? toLogin,
   }) {
     return toDetailProject?.call(id);
   }
@@ -316,6 +354,8 @@ class _$ToDetailProjectNavigationPagesEvent
     TResult Function()? toHome,
     TResult Function(int id)? toDetailProject,
     TResult Function(int id)? toTaskProject,
+    TResult Function()? toOnBoarding,
+    TResult Function()? toLogin,
     required TResult orElse(),
   }) {
     if (toDetailProject != null) {
@@ -332,6 +372,9 @@ class _$ToDetailProjectNavigationPagesEvent
         toDetailProject,
     required TResult Function(ToTaskProjectNavigationPagesEvent value)
         toTaskProject,
+    required TResult Function(ToOnBoardingNavigationPagesEvent value)
+        toOnBoarding,
+    required TResult Function(ToLoginNavigationPagesEvent value) toLogin,
   }) {
     return toDetailProject(this);
   }
@@ -343,6 +386,8 @@ class _$ToDetailProjectNavigationPagesEvent
     TResult Function(ToDetailProjectNavigationPagesEvent value)?
         toDetailProject,
     TResult Function(ToTaskProjectNavigationPagesEvent value)? toTaskProject,
+    TResult Function(ToOnBoardingNavigationPagesEvent value)? toOnBoarding,
+    TResult Function(ToLoginNavigationPagesEvent value)? toLogin,
   }) {
     return toDetailProject?.call(this);
   }
@@ -354,6 +399,8 @@ class _$ToDetailProjectNavigationPagesEvent
     TResult Function(ToDetailProjectNavigationPagesEvent value)?
         toDetailProject,
     TResult Function(ToTaskProjectNavigationPagesEvent value)? toTaskProject,
+    TResult Function(ToOnBoardingNavigationPagesEvent value)? toOnBoarding,
+    TResult Function(ToLoginNavigationPagesEvent value)? toLogin,
     required TResult orElse(),
   }) {
     if (toDetailProject != null) {
@@ -449,6 +496,8 @@ class _$ToTaskProjectNavigationPagesEvent
     required TResult Function() toHome,
     required TResult Function(int id) toDetailProject,
     required TResult Function(int id) toTaskProject,
+    required TResult Function() toOnBoarding,
+    required TResult Function() toLogin,
   }) {
     return toTaskProject(id);
   }
@@ -459,6 +508,8 @@ class _$ToTaskProjectNavigationPagesEvent
     TResult Function()? toHome,
     TResult Function(int id)? toDetailProject,
     TResult Function(int id)? toTaskProject,
+    TResult Function()? toOnBoarding,
+    TResult Function()? toLogin,
   }) {
     return toTaskProject?.call(id);
   }
@@ -469,6 +520,8 @@ class _$ToTaskProjectNavigationPagesEvent
     TResult Function()? toHome,
     TResult Function(int id)? toDetailProject,
     TResult Function(int id)? toTaskProject,
+    TResult Function()? toOnBoarding,
+    TResult Function()? toLogin,
     required TResult orElse(),
   }) {
     if (toTaskProject != null) {
@@ -485,6 +538,9 @@ class _$ToTaskProjectNavigationPagesEvent
         toDetailProject,
     required TResult Function(ToTaskProjectNavigationPagesEvent value)
         toTaskProject,
+    required TResult Function(ToOnBoardingNavigationPagesEvent value)
+        toOnBoarding,
+    required TResult Function(ToLoginNavigationPagesEvent value) toLogin,
   }) {
     return toTaskProject(this);
   }
@@ -496,6 +552,8 @@ class _$ToTaskProjectNavigationPagesEvent
     TResult Function(ToDetailProjectNavigationPagesEvent value)?
         toDetailProject,
     TResult Function(ToTaskProjectNavigationPagesEvent value)? toTaskProject,
+    TResult Function(ToOnBoardingNavigationPagesEvent value)? toOnBoarding,
+    TResult Function(ToLoginNavigationPagesEvent value)? toLogin,
   }) {
     return toTaskProject?.call(this);
   }
@@ -507,6 +565,8 @@ class _$ToTaskProjectNavigationPagesEvent
     TResult Function(ToDetailProjectNavigationPagesEvent value)?
         toDetailProject,
     TResult Function(ToTaskProjectNavigationPagesEvent value)? toTaskProject,
+    TResult Function(ToOnBoardingNavigationPagesEvent value)? toOnBoarding,
+    TResult Function(ToLoginNavigationPagesEvent value)? toLogin,
     required TResult orElse(),
   }) {
     if (toTaskProject != null) {
@@ -528,6 +588,270 @@ abstract class ToTaskProjectNavigationPagesEvent extends NavigationPagesEvent {
 }
 
 /// @nodoc
+abstract class $ToOnBoardingNavigationPagesEventCopyWith<$Res> {
+  factory $ToOnBoardingNavigationPagesEventCopyWith(
+          ToOnBoardingNavigationPagesEvent value,
+          $Res Function(ToOnBoardingNavigationPagesEvent) then) =
+      _$ToOnBoardingNavigationPagesEventCopyWithImpl<$Res>;
+}
+
+/// @nodoc
+class _$ToOnBoardingNavigationPagesEventCopyWithImpl<$Res>
+    extends _$NavigationPagesEventCopyWithImpl<$Res>
+    implements $ToOnBoardingNavigationPagesEventCopyWith<$Res> {
+  _$ToOnBoardingNavigationPagesEventCopyWithImpl(
+      ToOnBoardingNavigationPagesEvent _value,
+      $Res Function(ToOnBoardingNavigationPagesEvent) _then)
+      : super(_value, (v) => _then(v as ToOnBoardingNavigationPagesEvent));
+
+  @override
+  ToOnBoardingNavigationPagesEvent get _value =>
+      super._value as ToOnBoardingNavigationPagesEvent;
+}
+
+/// @nodoc
+
+class _$ToOnBoardingNavigationPagesEvent
+    extends ToOnBoardingNavigationPagesEvent {
+  const _$ToOnBoardingNavigationPagesEvent() : super._();
+
+  @override
+  String toString() {
+    return 'NavigationPagesEvent.toOnBoarding()';
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) ||
+        (other is ToOnBoardingNavigationPagesEvent);
+  }
+
+  @override
+  int get hashCode => runtimeType.hashCode;
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() toHome,
+    required TResult Function(int id) toDetailProject,
+    required TResult Function(int id) toTaskProject,
+    required TResult Function() toOnBoarding,
+    required TResult Function() toLogin,
+  }) {
+    return toOnBoarding();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult Function()? toHome,
+    TResult Function(int id)? toDetailProject,
+    TResult Function(int id)? toTaskProject,
+    TResult Function()? toOnBoarding,
+    TResult Function()? toLogin,
+  }) {
+    return toOnBoarding?.call();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? toHome,
+    TResult Function(int id)? toDetailProject,
+    TResult Function(int id)? toTaskProject,
+    TResult Function()? toOnBoarding,
+    TResult Function()? toLogin,
+    required TResult orElse(),
+  }) {
+    if (toOnBoarding != null) {
+      return toOnBoarding();
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(ToHomeNavigationPagesEvent value) toHome,
+    required TResult Function(ToDetailProjectNavigationPagesEvent value)
+        toDetailProject,
+    required TResult Function(ToTaskProjectNavigationPagesEvent value)
+        toTaskProject,
+    required TResult Function(ToOnBoardingNavigationPagesEvent value)
+        toOnBoarding,
+    required TResult Function(ToLoginNavigationPagesEvent value) toLogin,
+  }) {
+    return toOnBoarding(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult Function(ToHomeNavigationPagesEvent value)? toHome,
+    TResult Function(ToDetailProjectNavigationPagesEvent value)?
+        toDetailProject,
+    TResult Function(ToTaskProjectNavigationPagesEvent value)? toTaskProject,
+    TResult Function(ToOnBoardingNavigationPagesEvent value)? toOnBoarding,
+    TResult Function(ToLoginNavigationPagesEvent value)? toLogin,
+  }) {
+    return toOnBoarding?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(ToHomeNavigationPagesEvent value)? toHome,
+    TResult Function(ToDetailProjectNavigationPagesEvent value)?
+        toDetailProject,
+    TResult Function(ToTaskProjectNavigationPagesEvent value)? toTaskProject,
+    TResult Function(ToOnBoardingNavigationPagesEvent value)? toOnBoarding,
+    TResult Function(ToLoginNavigationPagesEvent value)? toLogin,
+    required TResult orElse(),
+  }) {
+    if (toOnBoarding != null) {
+      return toOnBoarding(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class ToOnBoardingNavigationPagesEvent extends NavigationPagesEvent {
+  const factory ToOnBoardingNavigationPagesEvent() =
+      _$ToOnBoardingNavigationPagesEvent;
+  const ToOnBoardingNavigationPagesEvent._() : super._();
+}
+
+/// @nodoc
+abstract class $ToLoginNavigationPagesEventCopyWith<$Res> {
+  factory $ToLoginNavigationPagesEventCopyWith(
+          ToLoginNavigationPagesEvent value,
+          $Res Function(ToLoginNavigationPagesEvent) then) =
+      _$ToLoginNavigationPagesEventCopyWithImpl<$Res>;
+}
+
+/// @nodoc
+class _$ToLoginNavigationPagesEventCopyWithImpl<$Res>
+    extends _$NavigationPagesEventCopyWithImpl<$Res>
+    implements $ToLoginNavigationPagesEventCopyWith<$Res> {
+  _$ToLoginNavigationPagesEventCopyWithImpl(ToLoginNavigationPagesEvent _value,
+      $Res Function(ToLoginNavigationPagesEvent) _then)
+      : super(_value, (v) => _then(v as ToLoginNavigationPagesEvent));
+
+  @override
+  ToLoginNavigationPagesEvent get _value =>
+      super._value as ToLoginNavigationPagesEvent;
+}
+
+/// @nodoc
+
+class _$ToLoginNavigationPagesEvent extends ToLoginNavigationPagesEvent {
+  const _$ToLoginNavigationPagesEvent() : super._();
+
+  @override
+  String toString() {
+    return 'NavigationPagesEvent.toLogin()';
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) || (other is ToLoginNavigationPagesEvent);
+  }
+
+  @override
+  int get hashCode => runtimeType.hashCode;
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() toHome,
+    required TResult Function(int id) toDetailProject,
+    required TResult Function(int id) toTaskProject,
+    required TResult Function() toOnBoarding,
+    required TResult Function() toLogin,
+  }) {
+    return toLogin();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult Function()? toHome,
+    TResult Function(int id)? toDetailProject,
+    TResult Function(int id)? toTaskProject,
+    TResult Function()? toOnBoarding,
+    TResult Function()? toLogin,
+  }) {
+    return toLogin?.call();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? toHome,
+    TResult Function(int id)? toDetailProject,
+    TResult Function(int id)? toTaskProject,
+    TResult Function()? toOnBoarding,
+    TResult Function()? toLogin,
+    required TResult orElse(),
+  }) {
+    if (toLogin != null) {
+      return toLogin();
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(ToHomeNavigationPagesEvent value) toHome,
+    required TResult Function(ToDetailProjectNavigationPagesEvent value)
+        toDetailProject,
+    required TResult Function(ToTaskProjectNavigationPagesEvent value)
+        toTaskProject,
+    required TResult Function(ToOnBoardingNavigationPagesEvent value)
+        toOnBoarding,
+    required TResult Function(ToLoginNavigationPagesEvent value) toLogin,
+  }) {
+    return toLogin(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult Function(ToHomeNavigationPagesEvent value)? toHome,
+    TResult Function(ToDetailProjectNavigationPagesEvent value)?
+        toDetailProject,
+    TResult Function(ToTaskProjectNavigationPagesEvent value)? toTaskProject,
+    TResult Function(ToOnBoardingNavigationPagesEvent value)? toOnBoarding,
+    TResult Function(ToLoginNavigationPagesEvent value)? toLogin,
+  }) {
+    return toLogin?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(ToHomeNavigationPagesEvent value)? toHome,
+    TResult Function(ToDetailProjectNavigationPagesEvent value)?
+        toDetailProject,
+    TResult Function(ToTaskProjectNavigationPagesEvent value)? toTaskProject,
+    TResult Function(ToOnBoardingNavigationPagesEvent value)? toOnBoarding,
+    TResult Function(ToLoginNavigationPagesEvent value)? toLogin,
+    required TResult orElse(),
+  }) {
+    if (toLogin != null) {
+      return toLogin(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class ToLoginNavigationPagesEvent extends NavigationPagesEvent {
+  const factory ToLoginNavigationPagesEvent() = _$ToLoginNavigationPagesEvent;
+  const ToLoginNavigationPagesEvent._() : super._();
+}
+
+/// @nodoc
 class _$NavigationPagesStateTearOff {
   const _$NavigationPagesStateTearOff();
 
@@ -546,6 +870,14 @@ class _$NavigationPagesStateTearOff {
       id,
     );
   }
+
+  LoginNavigationPagesState login() {
+    return const LoginNavigationPagesState();
+  }
+
+  onBoardingNavigationPagesState onBoarding() {
+    return const onBoardingNavigationPagesState();
+  }
 }
 
 /// @nodoc
@@ -558,6 +890,8 @@ mixin _$NavigationPagesState {
     required TResult Function() home,
     required TResult Function(int id) detailProject,
     required TResult Function(int id) taskProject,
+    required TResult Function() login,
+    required TResult Function() onBoarding,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -565,6 +899,8 @@ mixin _$NavigationPagesState {
     TResult Function()? home,
     TResult Function(int id)? detailProject,
     TResult Function(int id)? taskProject,
+    TResult Function()? login,
+    TResult Function()? onBoarding,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -572,6 +908,8 @@ mixin _$NavigationPagesState {
     TResult Function()? home,
     TResult Function(int id)? detailProject,
     TResult Function(int id)? taskProject,
+    TResult Function()? login,
+    TResult Function()? onBoarding,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -582,6 +920,8 @@ mixin _$NavigationPagesState {
         detailProject,
     required TResult Function(TaskProjectNavigationPagesState value)
         taskProject,
+    required TResult Function(LoginNavigationPagesState value) login,
+    required TResult Function(onBoardingNavigationPagesState value) onBoarding,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -589,6 +929,8 @@ mixin _$NavigationPagesState {
     TResult Function(HomeNavigationPagesState value)? home,
     TResult Function(DetailProjectNavigationPagesState value)? detailProject,
     TResult Function(TaskProjectNavigationPagesState value)? taskProject,
+    TResult Function(LoginNavigationPagesState value)? login,
+    TResult Function(onBoardingNavigationPagesState value)? onBoarding,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -596,6 +938,8 @@ mixin _$NavigationPagesState {
     TResult Function(HomeNavigationPagesState value)? home,
     TResult Function(DetailProjectNavigationPagesState value)? detailProject,
     TResult Function(TaskProjectNavigationPagesState value)? taskProject,
+    TResult Function(LoginNavigationPagesState value)? login,
+    TResult Function(onBoardingNavigationPagesState value)? onBoarding,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -662,6 +1006,8 @@ class _$HomeNavigationPagesState extends HomeNavigationPagesState {
     required TResult Function() home,
     required TResult Function(int id) detailProject,
     required TResult Function(int id) taskProject,
+    required TResult Function() login,
+    required TResult Function() onBoarding,
   }) {
     return home();
   }
@@ -672,6 +1018,8 @@ class _$HomeNavigationPagesState extends HomeNavigationPagesState {
     TResult Function()? home,
     TResult Function(int id)? detailProject,
     TResult Function(int id)? taskProject,
+    TResult Function()? login,
+    TResult Function()? onBoarding,
   }) {
     return home?.call();
   }
@@ -682,6 +1030,8 @@ class _$HomeNavigationPagesState extends HomeNavigationPagesState {
     TResult Function()? home,
     TResult Function(int id)? detailProject,
     TResult Function(int id)? taskProject,
+    TResult Function()? login,
+    TResult Function()? onBoarding,
     required TResult orElse(),
   }) {
     if (home != null) {
@@ -698,6 +1048,8 @@ class _$HomeNavigationPagesState extends HomeNavigationPagesState {
         detailProject,
     required TResult Function(TaskProjectNavigationPagesState value)
         taskProject,
+    required TResult Function(LoginNavigationPagesState value) login,
+    required TResult Function(onBoardingNavigationPagesState value) onBoarding,
   }) {
     return home(this);
   }
@@ -708,6 +1060,8 @@ class _$HomeNavigationPagesState extends HomeNavigationPagesState {
     TResult Function(HomeNavigationPagesState value)? home,
     TResult Function(DetailProjectNavigationPagesState value)? detailProject,
     TResult Function(TaskProjectNavigationPagesState value)? taskProject,
+    TResult Function(LoginNavigationPagesState value)? login,
+    TResult Function(onBoardingNavigationPagesState value)? onBoarding,
   }) {
     return home?.call(this);
   }
@@ -718,6 +1072,8 @@ class _$HomeNavigationPagesState extends HomeNavigationPagesState {
     TResult Function(HomeNavigationPagesState value)? home,
     TResult Function(DetailProjectNavigationPagesState value)? detailProject,
     TResult Function(TaskProjectNavigationPagesState value)? taskProject,
+    TResult Function(LoginNavigationPagesState value)? login,
+    TResult Function(onBoardingNavigationPagesState value)? onBoarding,
     required TResult orElse(),
   }) {
     if (home != null) {
@@ -805,6 +1161,8 @@ class _$DetailProjectNavigationPagesState
     required TResult Function() home,
     required TResult Function(int id) detailProject,
     required TResult Function(int id) taskProject,
+    required TResult Function() login,
+    required TResult Function() onBoarding,
   }) {
     return detailProject(id);
   }
@@ -815,6 +1173,8 @@ class _$DetailProjectNavigationPagesState
     TResult Function()? home,
     TResult Function(int id)? detailProject,
     TResult Function(int id)? taskProject,
+    TResult Function()? login,
+    TResult Function()? onBoarding,
   }) {
     return detailProject?.call(id);
   }
@@ -825,6 +1185,8 @@ class _$DetailProjectNavigationPagesState
     TResult Function()? home,
     TResult Function(int id)? detailProject,
     TResult Function(int id)? taskProject,
+    TResult Function()? login,
+    TResult Function()? onBoarding,
     required TResult orElse(),
   }) {
     if (detailProject != null) {
@@ -841,6 +1203,8 @@ class _$DetailProjectNavigationPagesState
         detailProject,
     required TResult Function(TaskProjectNavigationPagesState value)
         taskProject,
+    required TResult Function(LoginNavigationPagesState value) login,
+    required TResult Function(onBoardingNavigationPagesState value) onBoarding,
   }) {
     return detailProject(this);
   }
@@ -851,6 +1215,8 @@ class _$DetailProjectNavigationPagesState
     TResult Function(HomeNavigationPagesState value)? home,
     TResult Function(DetailProjectNavigationPagesState value)? detailProject,
     TResult Function(TaskProjectNavigationPagesState value)? taskProject,
+    TResult Function(LoginNavigationPagesState value)? login,
+    TResult Function(onBoardingNavigationPagesState value)? onBoarding,
   }) {
     return detailProject?.call(this);
   }
@@ -861,6 +1227,8 @@ class _$DetailProjectNavigationPagesState
     TResult Function(HomeNavigationPagesState value)? home,
     TResult Function(DetailProjectNavigationPagesState value)? detailProject,
     TResult Function(TaskProjectNavigationPagesState value)? taskProject,
+    TResult Function(LoginNavigationPagesState value)? login,
+    TResult Function(onBoardingNavigationPagesState value)? onBoarding,
     required TResult orElse(),
   }) {
     if (detailProject != null) {
@@ -954,6 +1322,8 @@ class _$TaskProjectNavigationPagesState
     required TResult Function() home,
     required TResult Function(int id) detailProject,
     required TResult Function(int id) taskProject,
+    required TResult Function() login,
+    required TResult Function() onBoarding,
   }) {
     return taskProject(id);
   }
@@ -964,6 +1334,8 @@ class _$TaskProjectNavigationPagesState
     TResult Function()? home,
     TResult Function(int id)? detailProject,
     TResult Function(int id)? taskProject,
+    TResult Function()? login,
+    TResult Function()? onBoarding,
   }) {
     return taskProject?.call(id);
   }
@@ -974,6 +1346,8 @@ class _$TaskProjectNavigationPagesState
     TResult Function()? home,
     TResult Function(int id)? detailProject,
     TResult Function(int id)? taskProject,
+    TResult Function()? login,
+    TResult Function()? onBoarding,
     required TResult orElse(),
   }) {
     if (taskProject != null) {
@@ -990,6 +1364,8 @@ class _$TaskProjectNavigationPagesState
         detailProject,
     required TResult Function(TaskProjectNavigationPagesState value)
         taskProject,
+    required TResult Function(LoginNavigationPagesState value) login,
+    required TResult Function(onBoardingNavigationPagesState value) onBoarding,
   }) {
     return taskProject(this);
   }
@@ -1000,6 +1376,8 @@ class _$TaskProjectNavigationPagesState
     TResult Function(HomeNavigationPagesState value)? home,
     TResult Function(DetailProjectNavigationPagesState value)? detailProject,
     TResult Function(TaskProjectNavigationPagesState value)? taskProject,
+    TResult Function(LoginNavigationPagesState value)? login,
+    TResult Function(onBoardingNavigationPagesState value)? onBoarding,
   }) {
     return taskProject?.call(this);
   }
@@ -1010,6 +1388,8 @@ class _$TaskProjectNavigationPagesState
     TResult Function(HomeNavigationPagesState value)? home,
     TResult Function(DetailProjectNavigationPagesState value)? detailProject,
     TResult Function(TaskProjectNavigationPagesState value)? taskProject,
+    TResult Function(LoginNavigationPagesState value)? login,
+    TResult Function(onBoardingNavigationPagesState value)? onBoarding,
     required TResult orElse(),
   }) {
     if (taskProject != null) {
@@ -1028,4 +1408,259 @@ abstract class TaskProjectNavigationPagesState extends NavigationPagesState {
   @JsonKey(ignore: true)
   $TaskProjectNavigationPagesStateCopyWith<TaskProjectNavigationPagesState>
       get copyWith => throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class $LoginNavigationPagesStateCopyWith<$Res> {
+  factory $LoginNavigationPagesStateCopyWith(LoginNavigationPagesState value,
+          $Res Function(LoginNavigationPagesState) then) =
+      _$LoginNavigationPagesStateCopyWithImpl<$Res>;
+}
+
+/// @nodoc
+class _$LoginNavigationPagesStateCopyWithImpl<$Res>
+    extends _$NavigationPagesStateCopyWithImpl<$Res>
+    implements $LoginNavigationPagesStateCopyWith<$Res> {
+  _$LoginNavigationPagesStateCopyWithImpl(LoginNavigationPagesState _value,
+      $Res Function(LoginNavigationPagesState) _then)
+      : super(_value, (v) => _then(v as LoginNavigationPagesState));
+
+  @override
+  LoginNavigationPagesState get _value =>
+      super._value as LoginNavigationPagesState;
+}
+
+/// @nodoc
+
+class _$LoginNavigationPagesState extends LoginNavigationPagesState {
+  const _$LoginNavigationPagesState() : super._();
+
+  @override
+  String toString() {
+    return 'NavigationPagesState.login()';
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) || (other is LoginNavigationPagesState);
+  }
+
+  @override
+  int get hashCode => runtimeType.hashCode;
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() home,
+    required TResult Function(int id) detailProject,
+    required TResult Function(int id) taskProject,
+    required TResult Function() login,
+    required TResult Function() onBoarding,
+  }) {
+    return login();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult Function()? home,
+    TResult Function(int id)? detailProject,
+    TResult Function(int id)? taskProject,
+    TResult Function()? login,
+    TResult Function()? onBoarding,
+  }) {
+    return login?.call();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? home,
+    TResult Function(int id)? detailProject,
+    TResult Function(int id)? taskProject,
+    TResult Function()? login,
+    TResult Function()? onBoarding,
+    required TResult orElse(),
+  }) {
+    if (login != null) {
+      return login();
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(HomeNavigationPagesState value) home,
+    required TResult Function(DetailProjectNavigationPagesState value)
+        detailProject,
+    required TResult Function(TaskProjectNavigationPagesState value)
+        taskProject,
+    required TResult Function(LoginNavigationPagesState value) login,
+    required TResult Function(onBoardingNavigationPagesState value) onBoarding,
+  }) {
+    return login(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult Function(HomeNavigationPagesState value)? home,
+    TResult Function(DetailProjectNavigationPagesState value)? detailProject,
+    TResult Function(TaskProjectNavigationPagesState value)? taskProject,
+    TResult Function(LoginNavigationPagesState value)? login,
+    TResult Function(onBoardingNavigationPagesState value)? onBoarding,
+  }) {
+    return login?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(HomeNavigationPagesState value)? home,
+    TResult Function(DetailProjectNavigationPagesState value)? detailProject,
+    TResult Function(TaskProjectNavigationPagesState value)? taskProject,
+    TResult Function(LoginNavigationPagesState value)? login,
+    TResult Function(onBoardingNavigationPagesState value)? onBoarding,
+    required TResult orElse(),
+  }) {
+    if (login != null) {
+      return login(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class LoginNavigationPagesState extends NavigationPagesState {
+  const factory LoginNavigationPagesState() = _$LoginNavigationPagesState;
+  const LoginNavigationPagesState._() : super._();
+}
+
+/// @nodoc
+abstract class $onBoardingNavigationPagesStateCopyWith<$Res> {
+  factory $onBoardingNavigationPagesStateCopyWith(
+          onBoardingNavigationPagesState value,
+          $Res Function(onBoardingNavigationPagesState) then) =
+      _$onBoardingNavigationPagesStateCopyWithImpl<$Res>;
+}
+
+/// @nodoc
+class _$onBoardingNavigationPagesStateCopyWithImpl<$Res>
+    extends _$NavigationPagesStateCopyWithImpl<$Res>
+    implements $onBoardingNavigationPagesStateCopyWith<$Res> {
+  _$onBoardingNavigationPagesStateCopyWithImpl(
+      onBoardingNavigationPagesState _value,
+      $Res Function(onBoardingNavigationPagesState) _then)
+      : super(_value, (v) => _then(v as onBoardingNavigationPagesState));
+
+  @override
+  onBoardingNavigationPagesState get _value =>
+      super._value as onBoardingNavigationPagesState;
+}
+
+/// @nodoc
+
+class _$onBoardingNavigationPagesState extends onBoardingNavigationPagesState {
+  const _$onBoardingNavigationPagesState() : super._();
+
+  @override
+  String toString() {
+    return 'NavigationPagesState.onBoarding()';
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) || (other is onBoardingNavigationPagesState);
+  }
+
+  @override
+  int get hashCode => runtimeType.hashCode;
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() home,
+    required TResult Function(int id) detailProject,
+    required TResult Function(int id) taskProject,
+    required TResult Function() login,
+    required TResult Function() onBoarding,
+  }) {
+    return onBoarding();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult Function()? home,
+    TResult Function(int id)? detailProject,
+    TResult Function(int id)? taskProject,
+    TResult Function()? login,
+    TResult Function()? onBoarding,
+  }) {
+    return onBoarding?.call();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? home,
+    TResult Function(int id)? detailProject,
+    TResult Function(int id)? taskProject,
+    TResult Function()? login,
+    TResult Function()? onBoarding,
+    required TResult orElse(),
+  }) {
+    if (onBoarding != null) {
+      return onBoarding();
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(HomeNavigationPagesState value) home,
+    required TResult Function(DetailProjectNavigationPagesState value)
+        detailProject,
+    required TResult Function(TaskProjectNavigationPagesState value)
+        taskProject,
+    required TResult Function(LoginNavigationPagesState value) login,
+    required TResult Function(onBoardingNavigationPagesState value) onBoarding,
+  }) {
+    return onBoarding(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult Function(HomeNavigationPagesState value)? home,
+    TResult Function(DetailProjectNavigationPagesState value)? detailProject,
+    TResult Function(TaskProjectNavigationPagesState value)? taskProject,
+    TResult Function(LoginNavigationPagesState value)? login,
+    TResult Function(onBoardingNavigationPagesState value)? onBoarding,
+  }) {
+    return onBoarding?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(HomeNavigationPagesState value)? home,
+    TResult Function(DetailProjectNavigationPagesState value)? detailProject,
+    TResult Function(TaskProjectNavigationPagesState value)? taskProject,
+    TResult Function(LoginNavigationPagesState value)? login,
+    TResult Function(onBoardingNavigationPagesState value)? onBoarding,
+    required TResult orElse(),
+  }) {
+    if (onBoarding != null) {
+      return onBoarding(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class onBoardingNavigationPagesState extends NavigationPagesState {
+  const factory onBoardingNavigationPagesState() =
+      _$onBoardingNavigationPagesState;
+  const onBoardingNavigationPagesState._() : super._();
 }
