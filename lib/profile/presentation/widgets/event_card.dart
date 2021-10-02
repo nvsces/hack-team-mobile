@@ -41,16 +41,22 @@ class EventCard extends StatelessWidget {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              Text(
-                miting.date,
-                style: TextStyle(color: Colors.blue),
+              Padding(
+                padding: const EdgeInsets.only(top: 8.0, bottom: 4.0),
+                child: Text(
+                  miting.date,
+                  style: TextStyle(color: Colors.blue),
+                ),
               ),
-              Text(
-                miting.title,
-                style: TextStyle(
-                  color: Colors.black,
-                  fontSize: 16.0,
-                  fontWeight: FontWeight.bold,
+              Padding(
+                padding: const EdgeInsets.only(top: 4.0, bottom: 8.0),
+                child: Text(
+                  miting.title,
+                  style: TextStyle(
+                    color: Colors.black,
+                    fontSize: 16.0,
+                    fontWeight: FontWeight.bold,
+                  ),
                 ),
               )
             ],

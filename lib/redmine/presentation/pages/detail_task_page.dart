@@ -45,19 +45,22 @@ class DetailTaskPage extends StatelessWidget {
                 SizedBox(
                   height: 16.0,
                 ),
-                Row(
-                  children: [
-                    PriorityCard(
-                      object: task.priority,
-                      isPriority: true,
-                      full: true,
-                    ),
-                    PriorityCard(
-                      object: task.status,
-                      isPriority: false,
-                      full: true,
-                    ),
-                  ],
+                Padding(
+                  padding: const EdgeInsets.only(bottom: 8.0),
+                  child: Row(
+                    children: [
+                      PriorityCard(
+                        object: task.priority,
+                        isPriority: true,
+                        full: true,
+                      ),
+                      PriorityCard(
+                        object: task.status,
+                        isPriority: false,
+                        full: true,
+                      ),
+                    ],
+                  ),
                 ),
                 Text(
                   'Описание задачи',
@@ -66,7 +69,15 @@ class DetailTaskPage extends StatelessWidget {
                 SizedBox(
                   height: 8.0,
                 ),
-                Text(task.description),
+                Text(
+                  task.description,
+                  style: TextStyle(
+                    color: Colors.black,
+                    fontSize: 16.0,
+                    fontWeight: FontWeight.normal,
+                    fontStyle: FontStyle.italic,
+                  ),
+                ),
                 SizedBox(
                   height: 24.0,
                 ),
@@ -75,7 +86,11 @@ class DetailTaskPage extends StatelessWidget {
                     'Пользователь',
                     style: AppUiStyles.subTitle,
                   ),
-                if (task.assigned_to != null) Text(task.assigned_to!.name),
+                if (task.assigned_to != null)
+                  Padding(
+                    padding: const EdgeInsets.only(top: 8.0),
+                    child: Text(task.assigned_to!.name),
+                  ),
                 SizedBox(
                   height: 32.0,
                 ),

@@ -38,7 +38,10 @@ class ProjectListWidget extends StatelessWidget {
                     borderRadius: BorderRadius.circular(8.0),
                   ),
                   child: ListTile(
-                    leading: Icon(FeatherIcons.users),
+                    leading: Icon(
+                      FeatherIcons.users,
+                      size: 36,
+                    ),
                     onTap: () => Navigator.push(
                       context,
                       MaterialPageRoute(
@@ -52,11 +55,19 @@ class ProjectListWidget extends StatelessWidget {
                       projects[i].name,
                       style: TextStyle(
                         color: Colors.black,
-                        fontSize: 16.0,
+                        fontSize: 20,
                         fontWeight: FontWeight.bold,
                       ),
                     ),
-                    subtitle: Text(projects[i].description),
+                    subtitle: Padding(
+                      padding: const EdgeInsets.only(top: 8.0),
+                      child: Text(
+                        projects[i].description,
+                        style: TextStyle(
+                          fontSize: 16,
+                        ),
+                      ),
+                    ),
                   ),
                   //   subtitle: Text(
                   //       'Проект разработки мобильного приложения для E-legion'),

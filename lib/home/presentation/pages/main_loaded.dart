@@ -28,7 +28,13 @@ class MainLoaded extends StatelessWidget {
                 Padding(
                   padding: EdgeInsets.only(left: 15.0, right: 15.0),
                   child: Text(
-                      'Сегодня День Рождения отмечает Иван Петров и Дмитрий Бугров!'),
+                    'Сегодня День Рождения отмечает Иван Петров и Дмитрий Бугров!',
+                    style: TextStyle(
+                      fontSize: 18,
+                      fontWeight: FontWeight.normal,
+                      fontStyle: FontStyle.italic,
+                    ),
+                  ),
                 ),
                 Padding(
                   padding: const EdgeInsets.only(left: 8.0, right: 15.0),

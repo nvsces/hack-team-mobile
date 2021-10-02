@@ -27,7 +27,10 @@ class InfoMitingWidget extends StatelessWidget {
             SizedBox(
               height: 20.0,
             ),
-            Text(miting.description),
+            Padding(
+              padding: const EdgeInsets.only(bottom: 16.0),
+              child: Text(miting.description),
+            ),
             ButtonApp(
                 onTap: () {
                   Navigator.pop(context);

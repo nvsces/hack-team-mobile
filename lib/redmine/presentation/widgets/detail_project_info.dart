@@ -67,7 +67,7 @@ class DetailProjectInfo extends StatelessWidget {
             children: List.generate(
               players.length,
               (i) => Padding(
-                padding: const EdgeInsets.all(10.0),
+                padding: const EdgeInsets.all(12.0),
                 child: StafferEnum(
                   players: players[i],
                 ),
@@ -103,11 +103,14 @@ class StafferEnum extends StatelessWidget {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          Text(
-            titleFormat(players.name) + ':',
-            style: TextStyle(
-              color: Color(0xff757575),
-              fontSize: 16.0,
+          Padding(
+            padding: const EdgeInsets.only(bottom: 4.0),
+            child: Text(
+              titleFormat(players.name) + ':',
+              style: TextStyle(
+                color: Color(0xff757575),
+                fontSize: 16.0,
+              ),
             ),
           ),
           Container(
