@@ -34,20 +34,27 @@ class TaskCard extends StatelessWidget {
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    Row(
-                      children: [
-                        PriorityCard(
-                          isPriority: true,
-                          object: task.priority,
-                        ),
-                        PriorityCard(
-                          isPriority: false,
-                          object: task.status,
-                        ),
-                      ],
+                    Padding(
+                      padding: const EdgeInsets.only(left: 5.0),
+                      child: Row(
+                        children: [
+                          PriorityCard(
+                            isPriority: true,
+                            object: task.priority,
+                          ),
+                          PriorityCard(
+                            isPriority: false,
+                            object: task.status,
+                          ),
+                        ],
+                      ),
                     ),
                     Padding(
-                      padding: const EdgeInsets.all(5.0),
+                      padding: const EdgeInsets.only(
+                        bottom: 5.0,
+                        left: 5.0,
+                        right: 5.0,
+                      ),
                       child: Text(
                         task.subject,
                         style: TextStyle(
@@ -237,9 +244,7 @@ class PriorityCard extends StatelessWidget {
     var text = '';
     if (!isPriority) {
       color = nameToColorStatus((object as TStatus).id);
-      text = full
-          ? 'Задача ' + (object as TStatus).name
-          : (object as TStatus).name;
+      text = full ? (object as TStatus).name : (object as TStatus).name;
     } else {
       color = nameToColorPriority((object as TPriority).id);
       text = full
@@ -247,14 +252,14 @@ class PriorityCard extends StatelessWidget {
           : (object as TPriority).name;
     }
     return Padding(
-      padding: const EdgeInsets.all(5.0),
+      padding: const EdgeInsets.only(top: 8.0, bottom: 8.0, right: 8.0),
       child: Container(
         decoration: BoxDecoration(
           color: color,
           borderRadius: BorderRadius.circular(8.0),
         ),
         child: Padding(
-          padding: const EdgeInsets.all(3.0),
+          padding: const EdgeInsets.all(5.0),
           child: Text(text),
         ),
       ),

@@ -53,7 +53,7 @@ class NewsCard extends StatelessWidget {
               Text(news.title,
                   style: TextStyle(
                     color: Colors.black,
-                    fontSize: 12.0,
+                    fontSize: 16,
                     fontWeight: FontWeight.bold,
                   )),
             ],
