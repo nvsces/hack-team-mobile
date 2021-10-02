@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:hack_team_flutter_app/auth/auth_bloc/auth_bloc.dart';
 import 'package:hack_team_flutter_app/constatns.dart';
+import 'package:hack_team_flutter_app/injection_container.dart';
 import 'package:hack_team_flutter_app/profile/models/profile_info_model.dart';
 import 'package:hack_team_flutter_app/profile/presentation/widgets/event_card.dart';
 import 'package:hack_team_flutter_app/profile/presentation/widgets/notification_header_widget.dart';
@@ -57,7 +59,13 @@ class ProfileLoadedWidget extends StatelessWidget {
                   model.mitings.length,
                   (i) => EventCard(miting: model.mitings[i]),
                 ),
-              )
+              ),
+              TextButton(
+                onPressed: () {
+                  sl<AuthBloc>().add(LogoutAuthEvent());
+                },
+                child: Text('ds==logout'),
+              ),
             ],
           ),
         ),
