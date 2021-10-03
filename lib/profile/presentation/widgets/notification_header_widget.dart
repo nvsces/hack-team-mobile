@@ -78,8 +78,8 @@ class NotificationHeaderWidget extends StatelessWidget {
             ),
           ),
           constraints: BoxConstraints(
-            maxWidth: MediaQuery.of(context).size.width * 0.8,
-          ),
+              //maxWidth: MediaQuery.of(context).size.width * 0.8,
+              ),
           builder: (context) {
             switch (status) {
               case 1:

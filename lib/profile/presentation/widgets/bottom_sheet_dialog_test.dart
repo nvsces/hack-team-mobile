@@ -21,6 +21,19 @@ class _ButtomSheetDialogTestState extends State<ButtomSheetDialogTest> {
         crossAxisAlignment: CrossAxisAlignment.start,
         mainAxisAlignment: MainAxisAlignment.start,
         children: [
+          Center(
+            child: Padding(
+              padding: const EdgeInsets.all(5.0),
+              child: Container(
+                width: 60,
+                height: 7,
+                decoration: BoxDecoration(
+                  color: Color(0xffE0E0E0),
+                  borderRadius: BorderRadius.circular(8.0),
+                ),
+              ),
+            ),
+          ),
           Padding(
             padding: const EdgeInsets.only(
                 left: 16.0, right: 16.0, top: 5.0, bottom: 5.0),
@@ -102,6 +115,9 @@ class _ButtomSheetDialogTestState extends State<ButtomSheetDialogTest> {
               text: 'Ответить',
             ),
           ),
+          SizedBox(
+            height: 50,
+          )
         ],
       ),
     );

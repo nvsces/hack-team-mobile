@@ -16,6 +16,19 @@ class InfoMitingWidget extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.start,
           mainAxisSize: MainAxisSize.min,
           children: [
+            Center(
+              child: Padding(
+                padding: const EdgeInsets.all(5.0),
+                child: Container(
+                  width: 60,
+                  height: 7,
+                  decoration: BoxDecoration(
+                    color: Color(0xffE0E0E0),
+                    borderRadius: BorderRadius.circular(8.0),
+                  ),
+                ),
+              ),
+            ),
             Text(
               miting.title,
               style: AppUiStyles.title,
@@ -36,6 +49,9 @@ class InfoMitingWidget extends StatelessWidget {
                   Navigator.pop(context);
                 },
                 text: 'Понятно'),
+            SizedBox(
+              height: 50,
+            ),
           ],
         ),
       ),

@@ -20,6 +20,19 @@ class BottomSheetDialogJune extends StatelessWidget {
       crossAxisAlignment: CrossAxisAlignment.start,
       mainAxisAlignment: MainAxisAlignment.start,
       children: [
+        Center(
+          child: Padding(
+            padding: const EdgeInsets.all(5.0),
+            child: Container(
+              width: 60,
+              height: 7,
+              decoration: BoxDecoration(
+                color: Color(0xffE0E0E0),
+                borderRadius: BorderRadius.circular(8.0),
+              ),
+            ),
+          ),
+        ),
         Padding(
           padding: const EdgeInsets.all(16.0),
           child: Text(
@@ -76,6 +89,9 @@ class BottomSheetDialogJune extends StatelessWidget {
                 Navigator.pop(context);
               },
               text: 'Понятно'),
+        ),
+        SizedBox(
+          height: 50,
         )
       ],
     ));
