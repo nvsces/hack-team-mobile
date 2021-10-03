@@ -25,6 +25,10 @@ class RedmineRepository {
 
   void logout() => apiRedmine.logout();
 
+  void onBoardingActive(bool value) => apiRedmine.onBoardingActive(value);
+
+  bool get onBoardingStatus => apiRedmine.onBoardingStatus;
+
   String get token => apiRedmine.getToken();
 
   Future<Either<Exception, List<ProjectModel>>> getAllProjects() async {

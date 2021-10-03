@@ -96,6 +96,14 @@ class ApiRedmine {
     sharedPreferences.remove('token');
   }
 
+  void onBoardingActive(bool value) {
+    sharedPreferences.setBool('onboard', value);
+  }
+
+  bool get onBoardingStatus {
+    return sharedPreferences.getBool('onboard') ?? false;
+  }
+
   String getToken() => sharedPreferences.getString('token') ?? 'token';
 
   Future<List<ProjectModel>> getAllProject() async {

@@ -47,10 +47,12 @@ class AuthBloc extends Bloc<AuthEvent, AuthState> {
     var auth = await redmineRepository.login(token);
     log(token);
     log(auth.toString());
-    if (auth) {
-      yield LoggedAuthState();
-    } else {
-      yield NonLoggedAuthState();
+    if (redmineRepository.onBoardingStatus) {
+      if (auth) {
+        yield LoggedAuthState();
+      } else {
+        yield NonLoggedAuthState();
+      }
     }
   }
 
@@ -69,6 +71,7 @@ class AuthBloc extends Bloc<AuthEvent, AuthState> {
     var resultAuth = await redmineRepository.login(token);
     print('resultAuth->$resultAuth');
     if (resultAuth) {
+      redmineRepository.onBoardingActive(true);
       yield LoggedAuthState();
     } else {
       yield NonLoggedAuthState();
@@ -77,6 +80,7 @@ class AuthBloc extends Bloc<AuthEvent, AuthState> {
 
   Stream<AuthState> _logout() async* {
     redmineRepository.logout();
+    redmineRepository.onBoardingActive(false);
     yield NonLoggedAuthState();
   }
 }
