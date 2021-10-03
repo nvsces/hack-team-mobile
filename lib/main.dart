@@ -24,9 +24,9 @@ void main() async {
         BlocProvider(create: (context) => sl<DialogBlocBloc>()),
         BlocProvider(create: (context) => sl<ProfileBloc>()),
         BlocProvider(create: (context) => sl<HomeBloc>()),
-        BlocProvider(
-            create: (context) =>
-                sl<AuthBloc>()..add(CheckAutorizationAuthEvent())),
+        BlocProvider(create: (context) => sl<AuthBloc>()
+            //..add(CheckAutorizationAuthEvent())
+            ),
       ],
       child: InitPage(),
     ),

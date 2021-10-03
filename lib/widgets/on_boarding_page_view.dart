@@ -164,7 +164,7 @@ class _OnBoardingPageViewState extends State<OnBoardingPageView> {
                     child: Text('Пропустить')),
               ),
               _buildPageViewContainer(
-                title: 'No money needed\n',
+                title: 'Отслеживание\nсвоих задач',
                 image: _buildImage(
                   'assets/images/a3.png',
                 ),
@@ -176,7 +176,7 @@ class _OnBoardingPageViewState extends State<OnBoardingPageView> {
                     child: Text('Пропустить')),
               ),
               _buildPageViewContainer(
-                title: 'Need some Money\n',
+                title: 'Новости\nи события команды',
                 image: _buildImage('assets/images/a4.png'),
                 child: SizedBox(
                   width: 100,
