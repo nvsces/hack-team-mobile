@@ -5,8 +5,6 @@ class DialogService with ChangeNotifier {
     required BuildContext context,
     required Widget child,
     required String barrierLabel,
-
-    // required Function() onDialog,
   }) {
     showGeneralDialog(
       useRootNavigator: true,

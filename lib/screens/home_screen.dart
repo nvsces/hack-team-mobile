@@ -47,11 +47,6 @@ class _HomeScreenState extends State<HomeScreen> {
       body: BlocConsumer<BottomNavBarBloc, BottomNavBarState>(
         listener: (context, state) {
           state.when(
-            document: () {
-              setState(() {
-                selectedItem = 1;
-              });
-            },
             profile: () {
               setState(() {
                 selectedItem = 2;
@@ -60,6 +55,11 @@ class _HomeScreenState extends State<HomeScreen> {
             main: () {
               setState(() {
                 selectedItem = 0;
+              });
+            },
+            redmine: () {
+              setState(() {
+                selectedItem = 1;
               });
             },
           );
@@ -79,13 +79,11 @@ class _HomeScreenState extends State<HomeScreen> {
               return SlideTransition(
                 transformHitTests: false,
                 position: offsetAnimation,
-                // Tween<Offset>(begin: Offset(-2.0, 0.0), end: Offset.zero)
-                //     .animate(animation),
                 child: child,
               );
             },
             child: state.when(
-              document: () => RedmineScreen(),
+              redmine: () => RedmineScreen(),
               profile: () => ProfileScreen(),
               main: () => MainScreen(),
             ),

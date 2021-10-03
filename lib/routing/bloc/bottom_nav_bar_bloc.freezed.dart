@@ -21,7 +21,7 @@ class _$BottomNavBarEventTearOff {
     return const ToMainBottomNavBarEvent();
   }
 
-  ToDocumentBottomNavBarEvent toDocument() {
+  ToDocumentBottomNavBarEvent toRedmine() {
     return const ToDocumentBottomNavBarEvent();
   }
 
@@ -38,21 +38,21 @@ mixin _$BottomNavBarEvent {
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function() toMain,
-    required TResult Function() toDocument,
+    required TResult Function() toRedmine,
     required TResult Function() toProfile,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
     TResult Function()? toMain,
-    TResult Function()? toDocument,
+    TResult Function()? toRedmine,
     TResult Function()? toProfile,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? toMain,
-    TResult Function()? toDocument,
+    TResult Function()? toRedmine,
     TResult Function()? toProfile,
     required TResult orElse(),
   }) =>
@@ -60,21 +60,21 @@ mixin _$BottomNavBarEvent {
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
     required TResult Function(ToMainBottomNavBarEvent value) toMain,
-    required TResult Function(ToDocumentBottomNavBarEvent value) toDocument,
+    required TResult Function(ToDocumentBottomNavBarEvent value) toRedmine,
     required TResult Function(ToProfileBottomNavBarEvent value) toProfile,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
     TResult Function(ToMainBottomNavBarEvent value)? toMain,
-    TResult Function(ToDocumentBottomNavBarEvent value)? toDocument,
+    TResult Function(ToDocumentBottomNavBarEvent value)? toRedmine,
     TResult Function(ToProfileBottomNavBarEvent value)? toProfile,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
     TResult Function(ToMainBottomNavBarEvent value)? toMain,
-    TResult Function(ToDocumentBottomNavBarEvent value)? toDocument,
+    TResult Function(ToDocumentBottomNavBarEvent value)? toRedmine,
     TResult Function(ToProfileBottomNavBarEvent value)? toProfile,
     required TResult orElse(),
   }) =>
@@ -139,7 +139,7 @@ class _$ToMainBottomNavBarEvent extends ToMainBottomNavBarEvent {
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function() toMain,
-    required TResult Function() toDocument,
+    required TResult Function() toRedmine,
     required TResult Function() toProfile,
   }) {
     return toMain();
@@ -149,7 +149,7 @@ class _$ToMainBottomNavBarEvent extends ToMainBottomNavBarEvent {
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
     TResult Function()? toMain,
-    TResult Function()? toDocument,
+    TResult Function()? toRedmine,
     TResult Function()? toProfile,
   }) {
     return toMain?.call();
@@ -159,7 +159,7 @@ class _$ToMainBottomNavBarEvent extends ToMainBottomNavBarEvent {
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? toMain,
-    TResult Function()? toDocument,
+    TResult Function()? toRedmine,
     TResult Function()? toProfile,
     required TResult orElse(),
   }) {
@@ -173,7 +173,7 @@ class _$ToMainBottomNavBarEvent extends ToMainBottomNavBarEvent {
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
     required TResult Function(ToMainBottomNavBarEvent value) toMain,
-    required TResult Function(ToDocumentBottomNavBarEvent value) toDocument,
+    required TResult Function(ToDocumentBottomNavBarEvent value) toRedmine,
     required TResult Function(ToProfileBottomNavBarEvent value) toProfile,
   }) {
     return toMain(this);
@@ -183,7 +183,7 @@ class _$ToMainBottomNavBarEvent extends ToMainBottomNavBarEvent {
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
     TResult Function(ToMainBottomNavBarEvent value)? toMain,
-    TResult Function(ToDocumentBottomNavBarEvent value)? toDocument,
+    TResult Function(ToDocumentBottomNavBarEvent value)? toRedmine,
     TResult Function(ToProfileBottomNavBarEvent value)? toProfile,
   }) {
     return toMain?.call(this);
@@ -193,7 +193,7 @@ class _$ToMainBottomNavBarEvent extends ToMainBottomNavBarEvent {
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
     TResult Function(ToMainBottomNavBarEvent value)? toMain,
-    TResult Function(ToDocumentBottomNavBarEvent value)? toDocument,
+    TResult Function(ToDocumentBottomNavBarEvent value)? toRedmine,
     TResult Function(ToProfileBottomNavBarEvent value)? toProfile,
     required TResult orElse(),
   }) {
@@ -237,7 +237,7 @@ class _$ToDocumentBottomNavBarEvent extends ToDocumentBottomNavBarEvent {
 
   @override
   String toString() {
-    return 'BottomNavBarEvent.toDocument()';
+    return 'BottomNavBarEvent.toRedmine()';
   }
 
   @override
@@ -252,32 +252,32 @@ class _$ToDocumentBottomNavBarEvent extends ToDocumentBottomNavBarEvent {
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function() toMain,
-    required TResult Function() toDocument,
+    required TResult Function() toRedmine,
     required TResult Function() toProfile,
   }) {
-    return toDocument();
+    return toRedmine();
   }
 
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
     TResult Function()? toMain,
-    TResult Function()? toDocument,
+    TResult Function()? toRedmine,
     TResult Function()? toProfile,
   }) {
-    return toDocument?.call();
+    return toRedmine?.call();
   }
 
   @override
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? toMain,
-    TResult Function()? toDocument,
+    TResult Function()? toRedmine,
     TResult Function()? toProfile,
     required TResult orElse(),
   }) {
-    if (toDocument != null) {
-      return toDocument();
+    if (toRedmine != null) {
+      return toRedmine();
     }
     return orElse();
   }
@@ -286,32 +286,32 @@ class _$ToDocumentBottomNavBarEvent extends ToDocumentBottomNavBarEvent {
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
     required TResult Function(ToMainBottomNavBarEvent value) toMain,
-    required TResult Function(ToDocumentBottomNavBarEvent value) toDocument,
+    required TResult Function(ToDocumentBottomNavBarEvent value) toRedmine,
     required TResult Function(ToProfileBottomNavBarEvent value) toProfile,
   }) {
-    return toDocument(this);
+    return toRedmine(this);
   }
 
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
     TResult Function(ToMainBottomNavBarEvent value)? toMain,
-    TResult Function(ToDocumentBottomNavBarEvent value)? toDocument,
+    TResult Function(ToDocumentBottomNavBarEvent value)? toRedmine,
     TResult Function(ToProfileBottomNavBarEvent value)? toProfile,
   }) {
-    return toDocument?.call(this);
+    return toRedmine?.call(this);
   }
 
   @override
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
     TResult Function(ToMainBottomNavBarEvent value)? toMain,
-    TResult Function(ToDocumentBottomNavBarEvent value)? toDocument,
+    TResult Function(ToDocumentBottomNavBarEvent value)? toRedmine,
     TResult Function(ToProfileBottomNavBarEvent value)? toProfile,
     required TResult orElse(),
   }) {
-    if (toDocument != null) {
-      return toDocument(this);
+    if (toRedmine != null) {
+      return toRedmine(this);
     }
     return orElse();
   }
@@ -364,7 +364,7 @@ class _$ToProfileBottomNavBarEvent extends ToProfileBottomNavBarEvent {
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function() toMain,
-    required TResult Function() toDocument,
+    required TResult Function() toRedmine,
     required TResult Function() toProfile,
   }) {
     return toProfile();
@@ -374,7 +374,7 @@ class _$ToProfileBottomNavBarEvent extends ToProfileBottomNavBarEvent {
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
     TResult Function()? toMain,
-    TResult Function()? toDocument,
+    TResult Function()? toRedmine,
     TResult Function()? toProfile,
   }) {
     return toProfile?.call();
@@ -384,7 +384,7 @@ class _$ToProfileBottomNavBarEvent extends ToProfileBottomNavBarEvent {
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? toMain,
-    TResult Function()? toDocument,
+    TResult Function()? toRedmine,
     TResult Function()? toProfile,
     required TResult orElse(),
   }) {
@@ -398,7 +398,7 @@ class _$ToProfileBottomNavBarEvent extends ToProfileBottomNavBarEvent {
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
     required TResult Function(ToMainBottomNavBarEvent value) toMain,
-    required TResult Function(ToDocumentBottomNavBarEvent value) toDocument,
+    required TResult Function(ToDocumentBottomNavBarEvent value) toRedmine,
     required TResult Function(ToProfileBottomNavBarEvent value) toProfile,
   }) {
     return toProfile(this);
@@ -408,7 +408,7 @@ class _$ToProfileBottomNavBarEvent extends ToProfileBottomNavBarEvent {
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
     TResult Function(ToMainBottomNavBarEvent value)? toMain,
-    TResult Function(ToDocumentBottomNavBarEvent value)? toDocument,
+    TResult Function(ToDocumentBottomNavBarEvent value)? toRedmine,
     TResult Function(ToProfileBottomNavBarEvent value)? toProfile,
   }) {
     return toProfile?.call(this);
@@ -418,7 +418,7 @@ class _$ToProfileBottomNavBarEvent extends ToProfileBottomNavBarEvent {
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
     TResult Function(ToMainBottomNavBarEvent value)? toMain,
-    TResult Function(ToDocumentBottomNavBarEvent value)? toDocument,
+    TResult Function(ToDocumentBottomNavBarEvent value)? toRedmine,
     TResult Function(ToProfileBottomNavBarEvent value)? toProfile,
     required TResult orElse(),
   }) {
@@ -442,8 +442,8 @@ class _$BottomNavBarStateTearOff {
     return const MainBottomNavBarState();
   }
 
-  DocumentBottomNavBarState document() {
-    return const DocumentBottomNavBarState();
+  RedmineBottomNavBarState redmine() {
+    return const RedmineBottomNavBarState();
   }
 
   ProfileBottomNavBarState profile() {
@@ -459,21 +459,21 @@ mixin _$BottomNavBarState {
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function() main,
-    required TResult Function() document,
+    required TResult Function() redmine,
     required TResult Function() profile,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
     TResult Function()? main,
-    TResult Function()? document,
+    TResult Function()? redmine,
     TResult Function()? profile,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? main,
-    TResult Function()? document,
+    TResult Function()? redmine,
     TResult Function()? profile,
     required TResult orElse(),
   }) =>
@@ -481,21 +481,21 @@ mixin _$BottomNavBarState {
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
     required TResult Function(MainBottomNavBarState value) main,
-    required TResult Function(DocumentBottomNavBarState value) document,
+    required TResult Function(RedmineBottomNavBarState value) redmine,
     required TResult Function(ProfileBottomNavBarState value) profile,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
     TResult Function(MainBottomNavBarState value)? main,
-    TResult Function(DocumentBottomNavBarState value)? document,
+    TResult Function(RedmineBottomNavBarState value)? redmine,
     TResult Function(ProfileBottomNavBarState value)? profile,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
     TResult Function(MainBottomNavBarState value)? main,
-    TResult Function(DocumentBottomNavBarState value)? document,
+    TResult Function(RedmineBottomNavBarState value)? redmine,
     TResult Function(ProfileBottomNavBarState value)? profile,
     required TResult orElse(),
   }) =>
@@ -560,7 +560,7 @@ class _$MainBottomNavBarState extends MainBottomNavBarState {
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function() main,
-    required TResult Function() document,
+    required TResult Function() redmine,
     required TResult Function() profile,
   }) {
     return main();
@@ -570,7 +570,7 @@ class _$MainBottomNavBarState extends MainBottomNavBarState {
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
     TResult Function()? main,
-    TResult Function()? document,
+    TResult Function()? redmine,
     TResult Function()? profile,
   }) {
     return main?.call();
@@ -580,7 +580,7 @@ class _$MainBottomNavBarState extends MainBottomNavBarState {
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? main,
-    TResult Function()? document,
+    TResult Function()? redmine,
     TResult Function()? profile,
     required TResult orElse(),
   }) {
@@ -594,7 +594,7 @@ class _$MainBottomNavBarState extends MainBottomNavBarState {
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
     required TResult Function(MainBottomNavBarState value) main,
-    required TResult Function(DocumentBottomNavBarState value) document,
+    required TResult Function(RedmineBottomNavBarState value) redmine,
     required TResult Function(ProfileBottomNavBarState value) profile,
   }) {
     return main(this);
@@ -604,7 +604,7 @@ class _$MainBottomNavBarState extends MainBottomNavBarState {
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
     TResult Function(MainBottomNavBarState value)? main,
-    TResult Function(DocumentBottomNavBarState value)? document,
+    TResult Function(RedmineBottomNavBarState value)? redmine,
     TResult Function(ProfileBottomNavBarState value)? profile,
   }) {
     return main?.call(this);
@@ -614,7 +614,7 @@ class _$MainBottomNavBarState extends MainBottomNavBarState {
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
     TResult Function(MainBottomNavBarState value)? main,
-    TResult Function(DocumentBottomNavBarState value)? document,
+    TResult Function(RedmineBottomNavBarState value)? redmine,
     TResult Function(ProfileBottomNavBarState value)? profile,
     required TResult orElse(),
   }) {
@@ -631,38 +631,38 @@ abstract class MainBottomNavBarState extends BottomNavBarState {
 }
 
 /// @nodoc
-abstract class $DocumentBottomNavBarStateCopyWith<$Res> {
-  factory $DocumentBottomNavBarStateCopyWith(DocumentBottomNavBarState value,
-          $Res Function(DocumentBottomNavBarState) then) =
-      _$DocumentBottomNavBarStateCopyWithImpl<$Res>;
+abstract class $RedmineBottomNavBarStateCopyWith<$Res> {
+  factory $RedmineBottomNavBarStateCopyWith(RedmineBottomNavBarState value,
+          $Res Function(RedmineBottomNavBarState) then) =
+      _$RedmineBottomNavBarStateCopyWithImpl<$Res>;
 }
 
 /// @nodoc
-class _$DocumentBottomNavBarStateCopyWithImpl<$Res>
+class _$RedmineBottomNavBarStateCopyWithImpl<$Res>
     extends _$BottomNavBarStateCopyWithImpl<$Res>
-    implements $DocumentBottomNavBarStateCopyWith<$Res> {
-  _$DocumentBottomNavBarStateCopyWithImpl(DocumentBottomNavBarState _value,
-      $Res Function(DocumentBottomNavBarState) _then)
-      : super(_value, (v) => _then(v as DocumentBottomNavBarState));
+    implements $RedmineBottomNavBarStateCopyWith<$Res> {
+  _$RedmineBottomNavBarStateCopyWithImpl(RedmineBottomNavBarState _value,
+      $Res Function(RedmineBottomNavBarState) _then)
+      : super(_value, (v) => _then(v as RedmineBottomNavBarState));
 
   @override
-  DocumentBottomNavBarState get _value =>
-      super._value as DocumentBottomNavBarState;
+  RedmineBottomNavBarState get _value =>
+      super._value as RedmineBottomNavBarState;
 }
 
 /// @nodoc
 
-class _$DocumentBottomNavBarState extends DocumentBottomNavBarState {
-  const _$DocumentBottomNavBarState() : super._();
+class _$RedmineBottomNavBarState extends RedmineBottomNavBarState {
+  const _$RedmineBottomNavBarState() : super._();
 
   @override
   String toString() {
-    return 'BottomNavBarState.document()';
+    return 'BottomNavBarState.redmine()';
   }
 
   @override
   bool operator ==(dynamic other) {
-    return identical(this, other) || (other is DocumentBottomNavBarState);
+    return identical(this, other) || (other is RedmineBottomNavBarState);
   }
 
   @override
@@ -672,32 +672,32 @@ class _$DocumentBottomNavBarState extends DocumentBottomNavBarState {
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function() main,
-    required TResult Function() document,
+    required TResult Function() redmine,
     required TResult Function() profile,
   }) {
-    return document();
+    return redmine();
   }
 
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
     TResult Function()? main,
-    TResult Function()? document,
+    TResult Function()? redmine,
     TResult Function()? profile,
   }) {
-    return document?.call();
+    return redmine?.call();
   }
 
   @override
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? main,
-    TResult Function()? document,
+    TResult Function()? redmine,
     TResult Function()? profile,
     required TResult orElse(),
   }) {
-    if (document != null) {
-      return document();
+    if (redmine != null) {
+      return redmine();
     }
     return orElse();
   }
@@ -706,40 +706,40 @@ class _$DocumentBottomNavBarState extends DocumentBottomNavBarState {
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
     required TResult Function(MainBottomNavBarState value) main,
-    required TResult Function(DocumentBottomNavBarState value) document,
+    required TResult Function(RedmineBottomNavBarState value) redmine,
     required TResult Function(ProfileBottomNavBarState value) profile,
   }) {
-    return document(this);
+    return redmine(this);
   }
 
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
     TResult Function(MainBottomNavBarState value)? main,
-    TResult Function(DocumentBottomNavBarState value)? document,
+    TResult Function(RedmineBottomNavBarState value)? redmine,
     TResult Function(ProfileBottomNavBarState value)? profile,
   }) {
-    return document?.call(this);
+    return redmine?.call(this);
   }
 
   @override
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
     TResult Function(MainBottomNavBarState value)? main,
-    TResult Function(DocumentBottomNavBarState value)? document,
+    TResult Function(RedmineBottomNavBarState value)? redmine,
     TResult Function(ProfileBottomNavBarState value)? profile,
     required TResult orElse(),
   }) {
-    if (document != null) {
-      return document(this);
+    if (redmine != null) {
+      return redmine(this);
     }
     return orElse();
   }
 }
 
-abstract class DocumentBottomNavBarState extends BottomNavBarState {
-  const factory DocumentBottomNavBarState() = _$DocumentBottomNavBarState;
-  const DocumentBottomNavBarState._() : super._();
+abstract class RedmineBottomNavBarState extends BottomNavBarState {
+  const factory RedmineBottomNavBarState() = _$RedmineBottomNavBarState;
+  const RedmineBottomNavBarState._() : super._();
 }
 
 /// @nodoc
@@ -784,7 +784,7 @@ class _$ProfileBottomNavBarState extends ProfileBottomNavBarState {
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function() main,
-    required TResult Function() document,
+    required TResult Function() redmine,
     required TResult Function() profile,
   }) {
     return profile();
@@ -794,7 +794,7 @@ class _$ProfileBottomNavBarState extends ProfileBottomNavBarState {
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
     TResult Function()? main,
-    TResult Function()? document,
+    TResult Function()? redmine,
     TResult Function()? profile,
   }) {
     return profile?.call();
@@ -804,7 +804,7 @@ class _$ProfileBottomNavBarState extends ProfileBottomNavBarState {
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? main,
-    TResult Function()? document,
+    TResult Function()? redmine,
     TResult Function()? profile,
     required TResult orElse(),
   }) {
@@ -818,7 +818,7 @@ class _$ProfileBottomNavBarState extends ProfileBottomNavBarState {
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
     required TResult Function(MainBottomNavBarState value) main,
-    required TResult Function(DocumentBottomNavBarState value) document,
+    required TResult Function(RedmineBottomNavBarState value) redmine,
     required TResult Function(ProfileBottomNavBarState value) profile,
   }) {
     return profile(this);
@@ -828,7 +828,7 @@ class _$ProfileBottomNavBarState extends ProfileBottomNavBarState {
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
     TResult Function(MainBottomNavBarState value)? main,
-    TResult Function(DocumentBottomNavBarState value)? document,
+    TResult Function(RedmineBottomNavBarState value)? redmine,
     TResult Function(ProfileBottomNavBarState value)? profile,
   }) {
     return profile?.call(this);
@@ -838,7 +838,7 @@ class _$ProfileBottomNavBarState extends ProfileBottomNavBarState {
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
     TResult Function(MainBottomNavBarState value)? main,
-    TResult Function(DocumentBottomNavBarState value)? document,
+    TResult Function(RedmineBottomNavBarState value)? redmine,
     TResult Function(ProfileBottomNavBarState value)? profile,
     required TResult orElse(),
   }) {

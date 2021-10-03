@@ -1,10 +1,8 @@
 import 'dart:developer';
 
 import 'package:flutter/material.dart';
-import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:hack_team_flutter_app/auth/auth_bloc/auth_bloc.dart';
+import 'package:hack_team_flutter_app/auth/auth_bloc.dart';
 import 'package:hack_team_flutter_app/injection_container.dart';
-import 'package:hack_team_flutter_app/redmine/domain/bloc/project_bloc.dart';
 import 'package:hack_team_flutter_app/redmine/presentation/widgets/text_field_wrapper.dart';
 
 class LoginRedminePage extends StatelessWidget {
@@ -22,13 +20,6 @@ class LoginRedminePage extends StatelessWidget {
         password: passwordController.text,
       ),
     );
-    // context.read<ProjectBloc>().add(
-    //       LoginProjectEvent(
-    //         name: nameController.text,
-    //         password: passwordController.text,
-    //         team: teamController.text,
-    //       ),
-    //     );
   }
 
   @override
@@ -50,24 +41,6 @@ class LoginRedminePage extends StatelessWidget {
                 textAlign: TextAlign.start,
               ),
             ),
-            // Padding(
-            //   padding: const EdgeInsets.all(15.0),
-            //   child: Text(
-            //     'Мы используем Redmine для менеджмента задач в нашей работе. Выполните вход в аккаунт, чтобы продолжить',
-            //     style: TextStyle(
-            //       color: Colors.grey,
-            //       fontSize: 16.0,
-            //     ),
-            //     textAlign: TextAlign.start,
-            //   ),
-            // ),
-            // Padding(
-            //   padding: const EdgeInsets.all(8.0),
-            //   child: TextFieldWrapper(
-            //     labelText: 'Название команды',
-            //     controller: teamController,
-            //   ),
-            // ),
             Padding(
               padding: const EdgeInsets.all(8.0),
               child: TextFieldWrapper(

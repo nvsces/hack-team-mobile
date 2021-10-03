@@ -12,12 +12,6 @@ class NavigationPagesEvent with _$NavigationPagesEvent {
 
   const factory NavigationPagesEvent.toHome() = ToHomeNavigationPagesEvent;
 
-  const factory NavigationPagesEvent.toDetailProject(int id) =
-      ToDetailProjectNavigationPagesEvent;
-
-  const factory NavigationPagesEvent.toTaskProject(int id) =
-      ToTaskProjectNavigationPagesEvent;
-
   const factory NavigationPagesEvent.toOnBoarding() =
       ToOnBoardingNavigationPagesEvent;
 
@@ -29,12 +23,6 @@ class NavigationPagesState with _$NavigationPagesState {
   const NavigationPagesState._();
 
   const factory NavigationPagesState.home() = HomeNavigationPagesState;
-
-  const factory NavigationPagesState.detailProject(int id) =
-      DetailProjectNavigationPagesState;
-
-  const factory NavigationPagesState.taskProject(int id) =
-      TaskProjectNavigationPagesState;
 
   const factory NavigationPagesState.login() = LoginNavigationPagesState;
 
@@ -50,8 +38,6 @@ class NavigationPagesBloc
   Stream<NavigationPagesState> mapEventToState(NavigationPagesEvent event) =>
       event.when<Stream<NavigationPagesState>>(
         toHome: _toHome,
-        toDetailProject: _toDetailProject,
-        toTaskProject: _toTaskProject,
         toLogin: _toLogin,
         toOnBoarding: _toOnBoarding,
       );
@@ -66,14 +52,5 @@ class NavigationPagesBloc
 
   Stream<NavigationPagesState> _toLogin() async* {
     yield LoginNavigationPagesState();
-  }
-
-  Stream<NavigationPagesState> _toTaskProject(int id) async* {
-    log(id.toString());
-    yield TaskProjectNavigationPagesState(id);
-  }
-
-  Stream<NavigationPagesState> _toDetailProject(int id) async* {
-    yield DetailProjectNavigationPagesState(id);
   }
 }

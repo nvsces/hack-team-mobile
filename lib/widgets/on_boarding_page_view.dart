@@ -20,13 +20,6 @@ class _OnBoardingPageViewState extends State<OnBoardingPageView> {
 
   bool isPreview = true;
 
-  static const colors = [
-    Color(0xff000000),
-    Color(0xffff8f63),
-    Color(0xffb22f42),
-    // Color(0xff4d3d8a),
-  ];
-
   List<Widget> viewPages = [];
 
   void onChangeValuePageController(int value) {

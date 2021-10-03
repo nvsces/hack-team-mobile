@@ -2,12 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:flutter_feather_icons/flutter_feather_icons.dart';
 import 'package:hack_team_flutter_app/constatns.dart';
-import 'package:hack_team_flutter_app/injection_container.dart';
-import 'package:hack_team_flutter_app/redmine/domain/bloc/project_bloc.dart';
 import 'package:hack_team_flutter_app/redmine/domain/model/project_model.dart';
 import 'package:hack_team_flutter_app/redmine/presentation/pages/detail_project_page.dart';
-import 'package:hack_team_flutter_app/routing/bloc/navigation_pages_bloc.dart';
-import 'package:flutter_bloc/flutter_bloc.dart';
 
 class ProjectListWidget extends StatelessWidget {
   const ProjectListWidget({Key? key, required this.projects}) : super(key: key);
@@ -49,8 +45,6 @@ class ProjectListWidget extends StatelessWidget {
                             DetailProjectPage(id: projects[i].id),
                       ),
                     ),
-                    // sl<NavigationPagesBloc>()
-                    //     .add(ToDetailProjectNavigationPagesEvent(projects[i].id)),
                     title: Text(
                       projects[i].name,
                       style: TextStyle(
@@ -69,9 +63,6 @@ class ProjectListWidget extends StatelessWidget {
                       ),
                     ),
                   ),
-                  //   subtitle: Text(
-                  //       'Проект разработки мобильного приложения для E-legion'),
-                  // ),
                 ),
               );
             }),

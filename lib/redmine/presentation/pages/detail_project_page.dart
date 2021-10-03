@@ -6,7 +6,6 @@ import 'package:hack_team_flutter_app/injection_container.dart';
 import 'package:hack_team_flutter_app/redmine/domain/bloc/detail_project_bloc.dart';
 import 'package:hack_team_flutter_app/redmine/domain/repository/redmine_repository.dart';
 import 'package:hack_team_flutter_app/redmine/presentation/widgets/detail_project_info.dart';
-import 'package:hack_team_flutter_app/routing/bloc/navigation_pages_bloc.dart';
 import 'package:hack_team_flutter_app/widgets/failure_loaded_widget.dart';
 import 'package:hack_team_flutter_app/widgets/loading_widget.dart';
 
@@ -37,7 +36,6 @@ class DetailProjectPage extends StatelessWidget {
           ),
           onPressed: () {
             Navigator.pop(context);
-            //sl<NavigationPagesBloc>().add(ToHomeNavigationPagesEvent());
           },
         ),
       ),

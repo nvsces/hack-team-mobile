@@ -1,10 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:hack_team_flutter_app/constatns.dart';
-import 'package:hack_team_flutter_app/injection_container.dart';
 import 'package:hack_team_flutter_app/redmine/domain/model/detail_project/players.dart';
 import 'package:hack_team_flutter_app/redmine/presentation/pages/task_project_page.dart';
-import 'package:hack_team_flutter_app/routing/bloc/navigation_pages_bloc.dart';
 
 class DetailProjectInfo extends StatelessWidget {
   const DetailProjectInfo({Key? key, required this.players, required this.id})
@@ -41,8 +39,6 @@ class DetailProjectInfo extends StatelessWidget {
                           builder: (context) => TaskProjectPage(
                                 id: id,
                               )));
-                  // sl<NavigationPagesBloc>()
-                  //     .add(ToTaskProjectNavigationPagesEvent(id));
                 },
                 leading: Icon(Icons.layers),
                 title: Text(

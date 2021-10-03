@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:hack_team_flutter_app/auth/auth_bloc/auth_bloc.dart';
+import 'package:hack_team_flutter_app/auth/auth_bloc.dart';
 import 'package:hack_team_flutter_app/constatns.dart';
 import 'package:hack_team_flutter_app/injection_container.dart';
 import 'package:hack_team_flutter_app/profile/models/profile_info_model.dart';

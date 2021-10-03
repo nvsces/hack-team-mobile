@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:hack_team_flutter_app/auth/auth_bloc/auth_bloc.dart';
+import 'package:hack_team_flutter_app/auth/auth_bloc.dart';
 import 'package:hack_team_flutter_app/home/bloc/home_bloc.dart';
 import 'package:hack_team_flutter_app/injection_container.dart';
 import 'package:hack_team_flutter_app/profile/data/profile_bloc.dart';
